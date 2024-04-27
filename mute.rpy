@@ -1,10 +1,11 @@
-## By Abdul
+## By Abdul and free to use for commercial and non-commercial projects, attribution not needed!
 
 ## When False, the mute indicator will not show. Useful when you want to add the ability for the
 ## mute indicator to be disabled from preferences.
+
 default persistent.show_mute_indicator = True
 
-## If you want to do that then you should add this to the preferences screen, inside the first hbox.
+## If you want to do that, add the following to the preferences screen, inside the first hbox.
 ## Check the indentation.
 
 #                 vbox:
@@ -56,10 +57,10 @@ init python:
 
 
 ## Mute indicator.
-## This shows a small little icon in the top left, when the game is muted.
-## This only shows when in game, and not in the menus, but you can modify screens.rpy to show in
+## This shows a small icon in the top left when the game is muted.
+## This only shows when in-game, and not in the menus, but you can modify screens.rpy to show it in
 ## menus (Which I recommend you do.)
-## To do that insert the statement `use mute_indicator` inside the main_menu and game_menu screen.
+## To do that insert the line `use mute_indicator` inside the main_menu and game_menu screen.
 screen mute_indicator():
     if persistent.show_mute_indicator:
         if preferences.get_mute("main"):
